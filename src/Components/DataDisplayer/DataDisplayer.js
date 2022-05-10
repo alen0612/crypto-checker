@@ -1,18 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./DataDisplayer.css";
-import Axios from "axios";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
-import { Button } from "@mui/material";
+import Button from "@mui/material/Button";
 import Avatar from "@mui/material/Avatar";
+import { Paper } from "@mui/material";
 
 function DataDisplayer(props) {
-  //console.log(data);
+  const handleMoreInfoOpen = () => {
+    props.setOpenInfo(true);
+  };
 
   return (
     <div className="Data-displayer">
@@ -95,14 +96,28 @@ function DataDisplayer(props) {
                 <TableCell align="left" sx={{ fontSize: 24, color: "white" }}>
                   $ {row.currentPrice}
                 </TableCell>
-                <TableCell align="left" sx={{ fontSize: 24, color: "white" }}>
-                  {row.changePercentage}%
-                </TableCell>
+                {row.changePercentage > 0 ? (
+                  <TableCell
+                    align="left"
+                    sx={{ fontSize: 24, color: "LimeGreen" }}
+                  >
+                    {row.changePercentage}%
+                  </TableCell>
+                ) : (
+                  <TableCell
+                    align="left"
+                    sx={{ fontSize: 24, color: "FireBrick" }}
+                  >
+                    {row.changePercentage}%
+                  </TableCell>
+                )}
                 <TableCell align="left" sx={{ fontSize: 24, color: "white" }}>
                   $ {row.totalVolume}
                 </TableCell>
                 <TableCell>
-                  <Button variant="contained">More Info</Button>
+                  <Button variant="contained" onClick={handleMoreInfoOpen}>
+                    More Info
+                  </Button>
                 </TableCell>
               </TableRow>
             ))}

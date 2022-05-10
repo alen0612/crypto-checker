@@ -1,0 +1,39 @@
+.More-info {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../../../public/cryptoBackgroundImageHor.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  position: fixed;
+  z-index: 5 !important;
+}
+
+.More-info-data {
+  width: 50%;
+  height: 80%;
+  background-color: rgba(62, 62, 62, 0.8);
+  border-radius: 20px;
+  z-index: 900;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5em;
+  text-align: center;
+}
+
+.Close-more-info-button {
+  z-index: 999;
+}
+
+@media screen and (max-width: 1024px) {
+  .More-info-data {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .More-info {
+    background-size: cover;
+    background-image: url("../../../public/cryptoBackgroundImageVer.jpg");
+  }
+}

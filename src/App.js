@@ -3,9 +3,11 @@ import DataDisplayer from "./Components/DataDisplayer/DataDisplayer";
 import SearchBar from "./Components/SearchBar/SearchBar";
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
+import MoreInfo from "./Components/MoreInfo/MoreInfo";
 
 function App() {
   const [data, setData] = useState([]);
+  const [openInfo, setOpenInfo] = useState(false);
 
   useEffect(() => {
     getData();
@@ -39,11 +41,19 @@ function App() {
       });
   };
 
-  return (
+  return openInfo ? (
+    <div className="App">
+      <MoreInfo setOpenInfo={setOpenInfo} />
+    </div>
+  ) : (
     <div className="App">
       <div className="Crypto-checker">Crypto Checker</div>
       <SearchBar data={data} setData={setData} getData={getData} />
-      <DataDisplayer data={data} />
+      <DataDisplayer
+        data={data}
+        openInfo={openInfo}
+        setOpenInfo={setOpenInfo}
+      />
     </div>
   );
 }
