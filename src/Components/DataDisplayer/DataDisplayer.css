@@ -1,0 +1,9 @@
+.Data-displayer {
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.Data-displayer-row:hover {
+  background-color: rgb(147, 147, 147);
+}

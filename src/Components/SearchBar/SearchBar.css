@@ -1,0 +1,48 @@
+.Search-bar {
+  width: inherit;
+}
+
+.Search-bar-input {
+  width: 40%;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 30%;
+  display: inline-block;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.Search-bar-search {
+  display: inline-block;
+  height: inherit;
+  margin-left: 30px;
+}
+
+.Search-icon:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+.Search-bar-refresh {
+  display: inline-block;
+  height: inherit;
+  margin-left: 30px;
+}
+
+.Refresh-icon:hover {
+  cursor: pointer;
+  animation: rotate 1.5s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
