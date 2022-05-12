@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/crypto-checker/static/css/main.63f52e77.css",
-    "main.js": "/crypto-checker/static/js/main.5e57c183.js",
+    "main.css": "/crypto-checker/static/css/main.82a655e5.css",
+    "main.js": "/crypto-checker/static/js/main.6b298a4e.js",
     "static/media/cryptoBackgroundImageHor.jpg": "/crypto-checker/static/media/cryptoBackgroundImageHor.1471b3b4e0320ee10be2.jpg",
     "static/media/cryptoBackgroundImageVer.jpg": "/crypto-checker/static/media/cryptoBackgroundImageVer.d9d9647e4a5f18133c2f.jpg",
     "index.html": "/crypto-checker/index.html",
-    "main.63f52e77.css.map": "/crypto-checker/static/css/main.63f52e77.css.map",
-    "main.5e57c183.js.map": "/crypto-checker/static/js/main.5e57c183.js.map"
+    "main.82a655e5.css.map": "/crypto-checker/static/css/main.82a655e5.css.map",
+    "main.6b298a4e.js.map": "/crypto-checker/static/js/main.6b298a4e.js.map"
   },
   "entrypoints": [
-    "static/css/main.63f52e77.css",
-    "static/js/main.5e57c183.js"
+    "static/css/main.82a655e5.css",
+    "static/js/main.6b298a4e.js"
   ]
 }
