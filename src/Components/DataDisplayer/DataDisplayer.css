@@ -17,3 +17,31 @@
   font-size: 1.1em;
   transition: ease-in-out 0.35s;
 }
+
+@media screen and (max-width: 1024px) {
+  .MuiTableCell-root {
+    font-size: 12px !important;
+  }
+
+  .Data-displayer-avatar {
+    width: 40px !important;
+    height: 40px !important;
+    left: -10%;
+  }
+
+  .MuiButton-root {
+    font-size: 5px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Data-displayer-avatar {
+    width: 30px !important;
+    height: 30px !important;
+    left: -15%;
+  }
+
+  .MuiButton-root {
+    font-size: 5px !important;
+  }
+}

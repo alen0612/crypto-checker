@@ -11,7 +11,27 @@ import Avatar from "@mui/material/Avatar";
 import { Paper } from "@mui/material";
 
 function DataDisplayer(props) {
-  const handleMoreInfoOpen = () => {
+  const handleMoreInfoOpen = (
+    name,
+    image,
+    symbol,
+    currentPrice,
+    totalVolume,
+    high,
+    low
+  ) => {
+    //console.log(name, image, symbol, currentPrice, totalVolume, high, low);
+    props.setSelectedData([
+      {
+        name: name,
+        image: image,
+        symbol: symbol,
+        currentPrice: currentPrice,
+        totalVolume: totalVolume,
+        high: high,
+        low: low,
+      },
+    ]);
     props.setOpenInfo(true);
   };
 
@@ -80,7 +100,8 @@ function DataDisplayer(props) {
                     alt={row.symbol}
                     src={row.image}
                     sx={{ width: 54, height: 54 }}
-                  ></Avatar>
+                    className="Data-displayer-avatar"
+                  />
                 </TableCell>
                 <TableCell
                   component="th"
@@ -115,7 +136,20 @@ function DataDisplayer(props) {
                   $ {row.totalVolume}
                 </TableCell>
                 <TableCell>
-                  <Button variant="contained" onClick={handleMoreInfoOpen}>
+                  <Button
+                    variant="contained"
+                    onClick={() =>
+                      handleMoreInfoOpen(
+                        row.name,
+                        row.image,
+                        row.symbol,
+                        row.currentPrice,
+                        row.totalVolume,
+                        row.high,
+                        row.low
+                      )
+                    }
+                  >
                     More Info
                   </Button>
                 </TableCell>

@@ -12,18 +12,6 @@
   border-radius: 5px;
 }
 
-.Search-bar-search {
-  display: inline-block;
-  height: inherit;
-  margin-left: 30px;
-}
-
-.Search-icon:hover {
-  cursor: pointer;
-  transform: translateY(-5px);
-  transition: 0.3s;
-}
-
 .Search-bar-refresh {
   display: inline-block;
   height: inherit;

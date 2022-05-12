@@ -10,19 +10,8 @@ function SearchBar(props) {
 
   const handleTextChange = (event) => {
     setSearch(event.target.value);
-    //console.log(event.target.value);
-  };
-
-  const handleSearchClick = () => {
-    const result = props.data.filter(
-      (item) =>
-        item.name.toLowerCase().includes(search.toLowerCase()) ||
-        item.symbol.toLowerCase().includes(search.toLowerCase())
-    );
-
-    console.log(result);
-
-    props.setData(result);
+    props.setData([]);
+    props.getData(event.target.value);
   };
 
   const handleRefreshClick = () => {
@@ -43,15 +32,7 @@ function SearchBar(props) {
           onChange={handleTextChange}
         />
       </div>
-      <div className="Search-bar-search">
-        <Button
-          variant="text"
-          sx={{ marginTop: 3.5 }}
-          onClick={handleSearchClick}
-        >
-          <SearchIcon sx={{ fontSize: 50 }} className="Search-icon" />
-        </Button>
-      </div>
+
       <div className="Search-bar-refresh">
         <Button
           variant="text"
