@@ -4,6 +4,8 @@
 
 [Link](https://alen0612.github.io/crypto-checker/)
 
+------
+
 - ReactJS
 - MUI
 - Third-party API
